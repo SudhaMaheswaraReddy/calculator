@@ -1,0 +1,142 @@
+<! DOCTYPE html>  
+<html>  
+<head>  
+<body>
+<meta charset="utf-8">  
+<title>  
+Calculator using HTML  
+</title>  
+      <style>  
+    html {  
+  height: 85vh;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;    
+  font-family: 'Cookie', cursive;  
+}  
+.title {  
+margin-bottom: 15px;  
+padding: 10px;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: black;  
+font-family: 'Cookie', cursive;  
+}
+input[type=button] {  
+  width: 60px;  
+  height: 60px;  
+  float: center;  
+  padding: 0;  
+  margin: 4px;  
+  box-sizing: border-box;  
+  background: black;  
+  border: none;  
+  font-size: 30px;  
+  line-height: 30px;  
+  border-radius: 10%;  
+  font-weight: 700;  
+  color: white;  
+  cursor: pointer;    
+}  
+input[type=text] {  
+  width: 270px;  
+  height: 60px;  
+  float: center;  
+  padding: 10;  
+  box-sizing: border-box;  
+  border:purple;  
+  background:grey;  
+  color:white;  
+  text-align: left;  
+  font-weight: 700;  
+  font-size: 60px;  
+  line-height: 60px;  
+  margin: 0px;  
+  }    
+#display {  
+  height: 40px;  
+  text-align: right;  
+  background-color: rgb(130,200,130);  
+  border: 3px solid black;  
+  font-size: 18px;  
+  left: 2px;  
+  top: 2px;  
+  color: black;  
+}
+.btnTop {  
+  color: blue;  
+  background-color: white;  
+  font-size: 14px;  
+  margin-right:100px;  
+  width: 500px;  
+  height: 250px;  
+}
+.blink{
+animation:blinker 2.99s linear infinite;
+color: black;
+font-family:forte;
+font-size: 60px;
+}   
+@keyframes blinker{
+50%{
+opacity:0;
+}
+}
+    </style>  
+</head>  
+<body">
+    <div class = "title"  align="center">  
+        <font face="emphasized" size="6" color="purple">Calculator using HTML</font> 
+    </div>  
+    <form name="Calculator" class = "calculator" >  
+<table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">  
+<tr>  
+<td>  
+<input type="text" name="Input" Size="35" id="display">  
+<br>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<input type="button" name = "one" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 1 " OnClick="Calculator.Input.value += '1'">  
+<input type="button" name = "two" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 2 " OnCLick="Calculator.Input.value += '2'">  
+<input type="button" name = "three" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 3 " OnClick="Calculator.Input.value += '3'">  
+<input type="button" name="add" class ="btnTop" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" + " OnClick="Calculator.Input.value += ' + '">  
+<br>  
+<input type="button" name = "four" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 4 " OnClick="Calculator.Input.value += '4'">  
+<input type="button" name = "five" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 5 " OnCLick="Calculator.Input.value += '5'">  
+<input type="button" name = "six" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 6 " OnClick="Calculator.Input.value += '6'">  
+<input type="button" name = "minus" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" - " OnClick="Calculator.Input.value += ' - '">  
+<br>  
+<input type="button" name = "seven" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 7 " OnClick="Calculator.Input.value += '7'">  
+<input type="button" name = "eight" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 8 " OnCLick="Calculator.Input.value += '8'">  
+<input type="button" name = "nine" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 9 " OnClick="Calculator.Input.value += '9'">  
+<input type="button" name = "mul" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" * "   
+OnClick="Calculator.Input.value += ' * '">  
+<br>  
+<input type="button" name = "clear" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" c " OnClick="Calculator.Input.value = ''">  
+<input type="button" name="zero" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" 0 " OnClick="Calculator.Input.value += '0'">  
+<input type="button" name="DoIt" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" = " OnClick="Calculator.Input.value = eval(Calculator.Input.value)">  
+<input type="button" name="div" style="height:5px,width:5px;border-radius:10px; font-size:30px" value=" / " OnClick="Calculator.Input.value += ' / '">  
+<br>  
+</td>  
+  
+</tr>  
+
+</table>  
+</form>  
+<p class="blink">
+<span style="color:#FF0000">T</span>
+<span style="color:#66cc66">e</span>
+<span style="color:#FF9966">c</span>
+<span style="color:#AA336A">h</span>
+<span style="color:#FF0066">n</span>
+<span style="color:#FF0000">o</span>
+<span style="color:#66CC66">h</span>
+<span style="color:#FF9966">a</span>
+<span style="color:#AA336A">c</span>
+<span style="color:#FF0066">k</span>
+<span style="color:#66CC66">s</span></p>
+</body>  
+</html>     
